@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --titles: "Montserrat", sans-serif;
+    --texts: "Noto Sans", sans-serif;
+    --xsmall: 1rem;
+    --small:1.5rem;
+    --medium: 2rem;
+    --big:3rem;
+    --xbig:4rem;
+    --xxbig:5rem;
+    --xxxbig: 7.5rem;
+    --blue: #252850;
+    --black: #1D1D1D;
+    --grey: #dddddd;
+    --white: #FBFBFB;
+    --green: #8ab52d;
+    --light_blue: rgb(54, 162, 235);
+}
+a,ul,li{
+    text-decoration: none;
+    list-style: none;
+}
+h1{
+    font-size: var(--xxbig);
+    font-family: var(--titles);
+    color: var(--black);
+}
+h2{
+    font-size: var(--xbig);
+    color: var(--black);
+    font-family: var(--titles);
+}
+h3{
+    font-size: var(--big);
+    color: var(--black);
+    font-family: var(--titles);
+}
+h4{
+    font-size: var(--medium);
+    color: var(--black);
+    font-family: var(--titles);
+}
+
+body{background-color: var(--white);}
+
+
+

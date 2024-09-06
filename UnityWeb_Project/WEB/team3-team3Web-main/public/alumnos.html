@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar Alumnos</title>
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/alumnos.css">
+</head>
+<body>
+  <div class="navbar_container"></div>
+  <main>
+    <h1>Administrar Alumnos</h1>
+    <div class="alumnos_main_container">
+      <div id="deleteSection" class="form_container">
+        <h2>Eliminar Alumno</h2>
+        <form id="deleteForm" class="main_form">
+          <label for="deleteNombre">Nombre del alumno:</label><br>
+          <input type="text" id="deleteNombre" name="deleteNombre" required><br>
+          <label for="deleteNumLista">Número de lista:</label><br>
+          <input type="number" id="deleteNumLista" name="deleteNumLista" required><br><br>
+          <button type="submit">Eliminar</button>
+        </form>
+        <div id="deleteMessage"></div>
+      </div>
+      <div id="addSection" class="form_container">
+        <h2>Agregar Alumno</h2>
+        <form id="addForm" class="main_form">
+          <label for="addNombre">Nombre del alumno:</label><br>
+          <input type="text" id="addNombre" name="addNombre" required><br>
+          <label for="addNumLista">Número de lista:</label><br>
+          <input type="number" id="addNumLista" name="addNumLista" required><br>
+          <label for="addGenero">Género:</label><br>
+          <select id="addGenero" name="addGenero">
+            <option value="M">Hombre</option>
+            <option value="F">Mujer</option>
+          </select><br><br>
+          <button type="submit">Agregar</button>
+        </form>
+        <div id="addMessage"></div>
+      </div>
+    </div>
+  </main>  
+  <footer class="general_footer">
+    <a href="license.html" target="_blank">Licencia de Uso</a>
+  </footer>
+  <script src="js/alumnos.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>

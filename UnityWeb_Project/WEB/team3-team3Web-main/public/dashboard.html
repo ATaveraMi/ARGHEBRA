@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script src="../js/verification.js"></script>
+  <script src="../js/dashboard.js"></script>
+</head>
+<body>
+
+  <div class="navbar_container">
+  </div>
+ 
+ <div class="dashboard_info_container">
+  <h1>Dashboard - Global</h1>
+  <div class="dashboard_btns_container">
+    <button onclick="displayLists()" id="show_lists_btn">mostrar Listas</button>
+    <button onclick="displayCharts()" id="show_charts_btn">mostrar graficos</button>
+  </div>
+  <div class="levels_btns_container">
+    <a href="first_level.html">Nivel 1</a>
+    <a href="second_level.html">Nivel 2</a>
+    <a href="third_level.html">Nivel 3</a>
+  </div>
+ </div>
+
+  <div id="lists_container" class="lists_parent_container">
+    <div id="topGlobalScores" class="lists_child_container">
+      <h2>Top 5 Puntajes Globales</h2>
+      <ul id="topGlobalScoresList"></ul>
+    </div>
+  
+    <div id="bottomGlobalScores" class="lists_child_container">
+      <h2>Bottom 5 Puntajes Globales</h2>
+      <ul id="bottomGlobalScoresList"></ul>
+    </div>
+  
+    <div id="topMaleScores" class="lists_child_container">
+      <h2>Top 5 Puntajes Hombres</h2>
+      <ul id="topMaleScoresList"></ul>
+    </div>
+  
+    <div id="bottomMaleScores" class="lists_child_container">
+      <h2>Bottom 5 Puntajes Hombres</h2>
+      <ul id="bottomMaleScoresList"></ul>
+    </div>
+  
+    <div id="topFemaleScores" class="lists_child_container">
+      <h2>Top 5 Puntajes Mujeres</h2>
+      <ul id="topFemaleScoresList"></ul>
+    </div>
+  
+    <div id="bottomFemaleScores" class="lists_child_container">
+      <h2>Bottom 5 Puntajes Mujeres</h2>
+      <ul id="bottomFemaleScoresList"></ul>
+    </div>
+  
+    <div id="alumnos" class="alumnos_games_container">
+      <h2>Lista de Alumnos y Veces Jugadas</h2>
+      <ul id="alumnosList"></ul>
+    </div>
+  </div>
+
+  <div id="charts_container" class="charts_parent_container">
+    <div id="topGlobalScores" class="charts_child_container">
+      <h4>Top 5 Puntajes Globales</h4>
+      <canvas id="topGlobalScoresChart"></canvas>
+      <div id="bottomGlobalScores" class="charts_child_container_second">
+        <h4>Bottom 5 Puntajes Globales</h4>
+        <canvas id="bottomGlobalScoresChart"></canvas>
+      </div>
+    </div>
+  
+   
+  
+    <div id="topMaleScores" class="charts_child_container">
+      <h4>Top 5 Puntajes Hombres</h4>
+      <canvas id="topMaleScoresChart"></canvas>
+      <div id="bottomMaleScores" class="charts_child_container_second">
+        <h4>Bottom 5 Puntajes Hombres</h4>
+        <canvas id="bottomMaleScoresChart"></canvas>
+      </div>
+    </div>
+  
+    
+  
+    <div id="topFemaleScores" class="charts_child_container">
+      <h4>Top 5 Puntajes Mujeres</h4>
+      <canvas id="topFemaleScoresChart"></canvas>
+      <div id="bottomFemaleScores" class="charts_child_container_second">
+        <h4>Bottom 5 Puntajes Mujeres</h4>
+        <canvas id="bottomFemaleScoresChart"></canvas>
+      </div>
+    </div>
+  
+  
+    <div id="alumnos" class="alumnos_games_container">
+      <h2>Lista de Alumnos y Veces Jugadas</h2>
+      <canvas id="alumnosChart"></canvas>
+    </div>
+  
+  </div>
+  <footer class="general_footer">
+    <a href="license.html" target="_blank">Licencia de Uso</a>
+  </footer>
+ <script src="js/navbar.js"></script>
+</body>
+</html>

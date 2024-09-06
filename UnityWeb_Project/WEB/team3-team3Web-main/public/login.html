@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <main class="landing_img_container">
+    <button class="back_btn" id="back_btn"> <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg> Regresar a Inicio</button>
+    <div class="form_container">
+      <h1>Login para ir al Dashboard</h1>
+      <form id="loginForm" class="main_form">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="contraseña">Contraseña:</label><br>
+        <input type="password" id="contraseña" name="contraseña" required><br><br>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+
+      <div id="message"></div>
+    </div>
+  </main>
+  <footer class="general_footer">
+    <a href="license.html" target="_blank">Licencia de Uso</a>
+  </footer>
+  <script src="js/login.js"></script>
+</body>
+</html>

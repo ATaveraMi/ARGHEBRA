@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
+
+public class MyGUI : MonoBehaviour
+{
+    public TMP_InputField tmp_user;
+    public TMP_InputField tmp_number;
+
+   IEnumerator SendData(User u)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", JsonUtility.ToJson(u));
+        Debug.Log(u.name + u.number);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:3000/login_player", form)) 
+        {
+            yield return www.SendWebRequest(); //Ejecuta la petición
+            if (www.result != UnityWebRequest.Result.Success) 
+            {
+                Debug.Log(www.error);
+            }
+            else //Petición exitosa aqui se implemnta el futuro cambio de escena
+            
+            {
+                string response = www.downloadHandler.text;
+                Debug.Log(response);
+            }
+        }
+    }
+
+    public void BotonJugar()
+    {
+        string nombre = tmp_user.text;
+        string lista = tmp_number.text;
+        Debug.Log("juega con grupo: " + nombre + " y lista: " + lista);
+        User u = new User();
+        u.name = nombre;
+        u.number = lista;
+        StartCoroutine(SendData(u));
+     }
+}

@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --titles: "Montserrat", sans-serif;
+    --texts: "Noto Sans", sans-serif;
+    --xsmall: 1rem;
+    --small:1.5rem;
+    --medium: 2rem;
+    --big:3rem;
+    --xbig:4rem;
+    --xxbig:5rem;
+    --xxxbig: 7.5rem;
+    --blue: #252850;
+    --black: #1D1D1D;
+    --grey: #dddddd;
+    --white: #FBFBFB;
+    --green: #8ab52d;
+    --light_blue: rgb(54, 162, 235);
+}
+a,ul,li{
+    text-decoration: none;
+    list-style: none;
+}
+h1{
+    font-size: var(--xxbig);
+    font-family: var(--titles);
+    color: var(--black);
+}
+h2{
+    font-size: var(--xbig);
+    color: var(--black);
+    font-family: var(--titles);
+}
+h3{
+    font-size: var(--big);
+    color: var(--black);
+    font-family: var(--titles);
+}
+h4{
+    font-size: var(--medium);
+    color: var(--black);
+    font-family: var(--titles);
+}
+
+body{background-color: var(--white);}
+
+.main_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main_form label{
+    color: var(--blue);
+    font-size: var(--medium);
+    font-family: var(--titles);
+    text-align: center;
+    font-weight: 400;
+}
+.main_form input{
+    background-color: var(--white);
+    border: 0.1rem solid var(--grey);
+    border-radius: 1rem;
+    width: 100%;
+    height: 5rem;
+    color: var(--black);
+    font-size: var(--medium);
+    font-family: var(--titles);
+    padding: 1.5rem 2.5rem;
+}
+
+/* Estilos para el select */
+#addGenero {
+    padding: 1rem;
+    font-size: var(--small);
+    border: 0.1rem solid var(--grey);
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    font-family: var(--texts);
+    width: 25rem;
+  }
+  
+  /* Estilos para las opciones del select */
+  #addGenero option {
+    padding: 8px; /* Añade un poco de espacio alrededor del texto */
+    font-size: var(--small);
+    font-family: var(--texts);
+  }
+  
+
+.error-message {
+    color: red;
+    font-size: var(--medium);
+    font-family: var(--texts);
+    font-weight: bold;
+}
+
+.success-message{
+    color: var(--light_blue);
+    font-size: var(--medium);
+    font-family: var(--texts);
+    font-weight: bold;
+}
+
+.back_btn{
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: var(--medium);
+    font-family: var(--titles);
+    transition: 0.3s ease-in-out;
+}
+.back_btn:hover{
+    transform: scale(1.1);
+}
+  
